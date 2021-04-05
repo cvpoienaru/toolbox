@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# Copyright (c) 2021, Codrin-Victor Poienaru <cvpoienaru@gmail.com>.
+# All rights reserved.
+
+declare -r DEFAULT_PREFIX="~/.config/toolbox"
+declare -r DEFAULT_CONFIG_FILE="${DEFAULT_PREFIX}/etc/toolbox.conf"
+declare -r WRENCH="${DEFAULT_PREFIX}/src/wrench.py"
+
+echo -e "[INFO] Default prefix: ${DEFAULT_PREFIX}"
+echo -e "[INFO] Default config file: ${DEFAULT_CONFIG_FILE}"
+
+eval "${WRENCH} --default-prefix ${DEFAULT_PREFIX} $@"
+
