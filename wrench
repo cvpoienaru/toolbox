@@ -12,5 +12,5 @@ declare -r WRENCH="${DEFAULT_PREFIX}/src/wrench.py"
 echo -e "[INFO] Default prefix: ${DEFAULT_PREFIX}"
 echo -e "[INFO] Default config file: ${DEFAULT_CONFIG_FILE}"
 
-eval "${WRENCH} --default-prefix ${DEFAULT_PREFIX} $@"
+eval "${WRENCH} --prefix ${DEFAULT_PREFIX} --config ${DEFAULT_CONFIG_FILE} $@"
 
